@@ -19,7 +19,7 @@ public class Doomed_Dice_Challenge_PartB
 	            }
 	        }
 	    }
-        //Creting two new integer arrays A and B each of size 6
+        //Creating two new integer arrays A and B each of size 6
         int[] New_Die_A = new int[6];
         int[] New_Die_B = new int[6];
         //Since sum of 2 = 1 + 1 is the only possible combination
@@ -145,38 +145,11 @@ public class Doomed_Dice_Challenge_PartB
             }
         }
         //Printing the elements of array A
-        for(int i:New_Die_A)
-        {
-            System.out.print(i+ " ");
-        }
+        System.out.print("New_Die_A = " + Arrays.toString(New_Die_A));
         System.out.println();
         //Printing the elements of array B
-        for(int i:New_Die_B)
-        {
-            System.out.print(i+" ");
-        }
-        System.out.println();
-        //It is to show that probability remains unchanged
-        HashMap<Integer,Integer> map1 = new HashMap<>();
-	    for(int i=0;i<6;i++)
-	    {
-	        for(int j=0;j<6;j++)
-	        {
-	            int temp = New_Die_A[i] + New_Die_B[j];
-	            if(map1.containsKey(temp))
-	            {
-	                map1.put(temp,map1.get(temp)+1);
-	            }
-	            else{
-	                map1.put(temp,1);
-	            }
-	        }
-	    }
-	    for(Map.Entry<Integer,Integer> i : map1.entrySet())
-	    {
-	        float res = (float) i.getValue() / 36;
-	        System.out.println("P(Sum of " + i.getKey() + ") = " + i.getValue() + " / 36 = " + res);
-	    }
+        System.out.print("New_Die_B = " + Arrays.toString(New_Die_B));
+
     }
 	public static void main(String[] args) {
 	    //Creating two normal dice Dice_A and Dice_B
